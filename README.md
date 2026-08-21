@@ -63,6 +63,16 @@ Unfortunately, he has receipts.
 
 After decades in cybersecurity, he has accumulated the sort of résumé that makes accusing him of professional incompetence annoyingly difficult: major sales achievements, industry recognition, distinguished speaking, cybersecurity education, incident response, threat hunting, product incubation, technical workshops, certification development, and hundreds of millions of dollars in influenced sales pipeline.
 
+And some of those receipts are particularly inconvenient for the prosecution.
+
+Mike wrote **_Practical Home Cybersecurity for Your Mom: Protecting Yourself from Attackers, Attorneys and A-Holes for the Non-Technical Person_**, an intentionally plain-English cybersecurity book for ordinary home users.
+
+He is also a co-author, with Ron Taylor and Leon Cruz, of the Cisco Press **_Cisco CyberOps Professional CBRCOR 350-201 Official Cert Guide_**, the official certification study guide covering the advanced cybersecurity material behind Cisco's CyberOps Professional certification.
+
+Then there is Cisco's **Rapid Incident Response** workshop. The public Cisco Security Workshop catalog lists **Rapid Incident Response v7** under Mike's name, credits him as a **Lead/Advisor**, and separately credits him for the **Workshop Writeup**. The workshop trains security professionals in hands-on threat detection, investigation, threat hunting, and incident response using Cisco XDR and related security technologies.
+
+So the irritating thing about Mike's tendency to talk like he knows what he's doing is that, every so often, somebody has gone and **published the evidence.**
+
 This has given Mike perhaps the single most irritating personality trait available to a know-it-all:
 
 **supporting documentation.**
