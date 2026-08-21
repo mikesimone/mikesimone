@@ -77,11 +77,11 @@ After decades in cybersecurity, he has accumulated the sort of résumé that mak
 
 And some of those receipts are particularly inconvenient for the prosecution.
 
-Mike wrote **_Practical Home Cybersecurity for Your Mom: Protecting Yourself from Attackers, Attorneys and A-Holes for the Non-Technical Person_**, an intentionally plain-English cybersecurity book for ordinary home users.
+Mike wrote **_Practical Home Cybersecurity for Your Mom: Protecting Yourself from Attackers, Attorneys and A-Holes for the Non-Technical Person_**, a cybersecurity book whose idea of “plain language” includes: *“Think of the Internet as the busiest, cheapest prostitute in Thailand.”*
 
-He is also a co-author, with Ron Taylor and Leon Cruz, of the Cisco Press **_Cisco CyberOps Professional CBRCOR 350-201 Official Cert Guide_**, the official certification study guide covering the advanced cybersecurity material behind Cisco's CyberOps Professional certification.
+He is also a co-author, with Ron Taylor and Leon Cruz, of the Cisco Press **_Cisco CyberOps Professional CBRCOR 350-201 Official Cert Guide_**.
 
-Then there is Cisco's **Rapid Incident Response** workshop. Mike created and wrote **all seven versions** of the workshop as it evolved across Cisco's security portfolio. For version 7, his management specifically asked him to lead a broader group of contributors rather than simply write the next iteration himself. In practice, Mike still ended up authoring the overwhelming majority of the material. **Darryl Hicks** was the notable exception: Mike specifically credits Hicks's contributions to the text as excellent and substantive. Cisco's public workshop catalog for v7 reflects the collaborative structure by listing Mike as **Lead/Advisor** and separately crediting him for the **Workshop Writeup**.
+Mike also created and wrote **all seven versions of Cisco's Rapid Incident Response workshop**; v7 became nominally collaborative, with **Darryl Hicks** making contributions Mike specifically considers excellent and substantive.
 
 So the irritating thing about Mike's tendency to talk like he knows what he's doing is that, every so often, somebody has gone and **published the evidence.**
 
