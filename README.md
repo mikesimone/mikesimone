@@ -5,6 +5,18 @@
 >
 > This is what came back.
 
+## A Note to Potential Employers
+
+If you're considering hiring Mike, **this page is your cultural-fit interview.** Read it. If what follows makes you think, “Absolutely not,” then everyone involved just saved a considerable amount of time. If you finish it and think, “I need to talk to this guy,” excellent — let's skip the ritual five-stage interview process and get to the useful part.
+
+Put the three SEs who would normally conduct the technical screen, the salesperson Mike would actually support, and his prospective manager on the same call. **You get two hours. Nothing is off limits.** Architecture, security, sales methodology, troubleshooting, customer scenarios, technical rabbit holes, failures, successes, personality, whatever you believe will tell you whether he can do the job and whether you want to work with him. Try to stump him. Challenge his assumptions. Give him an ugly problem and see what happens.
+
+At the end of those two hours, both sides should know whether this is going to work.
+
+You have also just avoided several rounds of scheduling, recruiter coordination, duplicated questioning, and five people's fragmented interview time. Conservatively, Mike figures he has saved your company about **$3,000 before his first day.**
+
+Consider it his first optimization.
+
 ---
 
 Mike Simone is what happens when you give hacker energy a cybersecurity salary and absolutely nobody successfully installs a rate limiter.
