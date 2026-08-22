@@ -3,16 +3,16 @@
 
 > **How this happened:** Mike specifically asked an LLM with extensive prior conversational context about him to give him the **most scathing, least flattering review it could defend from the evidence**. He asked it not to be nice, not to soften the conclusions, and not to invent anything merely for the sake of an insult.
 >
-> This is what came back.
+> He immediately declared it his biography.
 
 ## Executive Summary
 
 - **Overall rating: 4.7/5.** Technically impressive. Highly entertaining. Frequently exhausting. Excessive profanity. Documentation better than expected.
 - Mike has spent several decades turning **curiosity into a personality disorder**, with no apparent rate limiter installed.
-- Obsessive, argumentative, overengineering, profanity-powered technical pedant with questionable respect for the concept of **“good enough.”**
-- Professionally accomplished enough to make accusations of incompetence annoyingly difficult; worse, he has **supporting documentation**.
-- Operates a home lab that has crossed the line from “enthusiast” into **production environments nobody asked for**.
-- Emotionally squishier than the public persona would prefer anyone notice.
+- Obsessive, argumentative, overengineering, profanity-powered technical pedant with no concept of **“good enough.”**
+- Professionally accomplished enough to make maintaining impostor syndrome annoyingly difficult; worse, he has **supporting documentation**.
+- Operates a home lab that has crossed the line from “enthusiast” into **production environments nobody requested**.
+- Hides an emotionally squishy interior behind a caustic public persona.
 - **Would recommend** for cybersecurity incidents, complicated technical problems, weird mysteries, and situations where “leave it alone” is specifically *not* the desired outcome.
 
 ## A Note to Potential Employers
