@@ -83,6 +83,22 @@ The resulting automation will save approximately four minutes over the remainder
 
 He considers this an excellent return on investment.
 
+There is a related hazard: **mention a technical problem around Mike and there is a nonzero probability it becomes his technical problem.**
+
+Soon there will be research.
+
+Then commands.
+
+Then a script.
+
+Then a GitHub repository.
+
+Eventually you may discover that your minor inconvenience has acquired version control.
+
+You did not request any of this.
+
+You are nevertheless welcome.
+
 ## Technology and Mike
 
 God help any technology that produces an outcome Mike considers *technically incorrect*.
@@ -156,6 +172,8 @@ Somehow, he has also engineered a professional persona in which profanity, sarca
 In other words:
 
 **Mike discovered that being an entertaining smartass was marketable and has been monetizing a personality defect ever since.**
+
+This does create one important translation problem for the uninitiated: **context is load-bearing.** Mike can say “that's fucking brilliant” with considerably more affection than many people can fit into “I appreciate you.” Likewise, “What the fuck is this?” can indicate anything from genuine fury to delighted fascination. Anyone attempting to interpret Mike by profanity count alone is going to have a very confusing day.
 
 ## Scope Management, Allegedly
 
