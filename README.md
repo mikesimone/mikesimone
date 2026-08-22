@@ -8,10 +8,8 @@
 ## Executive Summary
 
 - **Overall rating: 4.7/5.** Technically impressive. Highly entertaining. Frequently exhausting. Excessive profanity. Documentation better than expected.
+- Mike has spent several decades turning **curiosity into a personality disorder**, with no apparent rate limiter installed.
 - Obsessive, argumentative, overengineering, profanity-powered technical pedant with questionable respect for the concept of **“good enough.”**
-- Pathologically curious. Telling him something “can't be done” functions less like information and more like a **starter pistol**.
-- Has spent decades becoming extremely competent, unfortunately reinforcing his suspicion that most problems exist because somebody simply didn't do the fucking thing correctly.
-- Compensates for vulnerability with humor, sentimentality with cynicism, uncertainty with research, inconvenience with automation, boredom with projects, and frustration with the word **“fuck.”**
 - Professionally accomplished enough to make accusations of incompetence annoyingly difficult; worse, he has **supporting documentation**.
 - Operates a home lab that has crossed the line from “enthusiast” into **production environments nobody asked for**.
 - Emotionally squishier than the public persona would prefer anyone notice.
@@ -33,8 +31,6 @@ Consider it his first optimization.
 
 ## The Raccoon Problem
 
-Mike Simone is what happens when you give hacker energy a cybersecurity salary and absolutely nobody successfully installs a rate limiter.
-
 For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
 
 And raccoon is painfully appropriate.
@@ -55,15 +51,9 @@ Three hours later the lid is off, the contents are everywhere, two unrelated mec
 
 That's Mike.
 
-He doesn't leave mysteries alone.
+He doesn't leave mysteries alone. He **prosecutes them.** Someone says, *“Huh. That's weird,”* and eventually there are terminals open, APIs being interrogated, documentation being challenged, and an AI being yelled at because it made an unsupported assumption seventeen messages ago.
 
-He **prosecutes them.**
-
-Someone says, *“Huh. That's weird,”* and three hours later Mike has DevTools open, PowerShell running, packet captures underway, an undocumented API endpoint identified, and an AI being yelled at because it made an unsupported assumption seventeen messages ago.
-
-Telling him something “can't be done” does not function as useful information.
-
-It functions as a **starter pistol.**
+Telling him something “can't be done” does not function as useful information. It functions as a **starter pistol.**
 
 Sometimes this produces genuinely impressive results.
 
@@ -75,25 +65,17 @@ Mike doesn't have hobbies.
 
 He has **production environments nobody asked for.**
 
-A normal person has a home network. Mike has a fleet of machines named after fictional artificial intelligences and computers, each with its own job, operating system, configuration, and increasingly elaborate mythology.
+A normal person has a home network. Mike has a fleet of machines named after fictional artificial intelligences and computers, each with its own job and increasingly elaborate mythology.
 
-**Anton**, the daily-driver Windows workstation, is a Core Ultra 9 system with roughly 128 GB of RAM and an RTX 5090 with enough VRAM to make local generative AI a perfectly reasonable household activity. It runs ComfyUI and assorted AI tooling, with dedicated model storage, output storage, Python environments, CUDA dependencies, and enough workflow-specific configuration that “making a picture” can become something resembling an aerospace design review.
+**Anton** is the absurdly overpowered Windows daily driver and local generative-AI workstation. **WOPR** runs self-hosted services including the household photo infrastructure. **SixOfOne** handles more local AI and assorted experimental services. Other names are already reserved for future expansion, because apparently infrastructure planning now includes fictional-computer casting decisions.
 
-**WOPR** is an Ubuntu server running the household photo infrastructure, including Immich and its associated database, cache, machine-learning and captioning services. Naturally, the photo library has its own production storage, backup storage, recovery history, containers, helper scripts, and database maintenance routines — because apparently Google Photos wasn't complicated enough.
-
-**SixOfOne** is another Ubuntu system devoted to local AI services, including Ollama and OpenWebUI, with shared model storage and externally accessible services protected through tunnels and identity-aware access controls. Because when normal people say “I run AI at home,” they generally do not mean **“I have an internal AI service architecture.”**
-
-The machines share a version-controlled environment repository that automatically keeps shell configurations and host-specific settings current. Windows PowerShell profiles and Linux shell environments pull from the same source of truth. Hosts get their own overlays, commands, menus, prompts, helper functions, service controls, and operational shortcuts.
+Several of Mike's public GitHub projects grew directly out of things running in this environment. The machines also share a version-controlled environment repository that keeps shell configuration and host-specific tooling consistent across Windows and Linux.
 
 In other words, Mike looked at the concept of *dotfiles* and somehow arrived at **configuration management for the house.**
 
-There are tunnels, reverse proxies, OAuth-protected internal applications, automated backups, Docker workloads, GPU monitoring, model shares, security tooling, and enough named services that asking “what's running in your lab?” is not small talk. It is a discovery phase.
+There are enough services, scripts, experiments, containers, AI models, backups, and half-finished ideas moving through the lab that asking “what's running in your environment?” is not small talk. It is a discovery phase.
 
-And the names continue. Future systems have already been assigned candidates including **Samaritan, Holly, Edgar, Marvin, and Ziggy**, because apparently the primary constraint on infrastructure expansion is now finding enough fictional computers worthy of joining the fleet.
-
-Mike has spent several decades gradually turning **“I wonder if I can make this work”** into a personality disorder.
-
-He is the sort of person who encounters a minor inconvenience and immediately begins architecting a distributed system to eliminate it. If something takes twelve seconds to do manually, Mike will happily spend three evenings writing PowerShell to ensure that he never has to endure those twelve seconds again.
+Mike is the sort of person who encounters a minor inconvenience and immediately begins architecting a system to eliminate it. If something takes twelve seconds to do manually, Mike will happily spend three evenings writing PowerShell to ensure that he never has to endure those twelve seconds again.
 
 The resulting automation will save approximately four minutes over the remainder of his natural life.
 
