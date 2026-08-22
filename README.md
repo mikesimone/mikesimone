@@ -5,11 +5,23 @@
 >
 > This is what came back.
 
+## Executive Summary
+
+- **Overall rating: 4.7/5.** Technically impressive. Highly entertaining. Frequently exhausting. Excessive profanity. Documentation better than expected.
+- Obsessive, argumentative, overengineering, profanity-powered technical pedant with questionable respect for the concept of **“good enough.”**
+- Pathologically curious. Telling him something “can't be done” functions less like information and more like a **starter pistol**.
+- Has spent decades becoming extremely competent, unfortunately reinforcing his suspicion that most problems exist because somebody simply didn't do the fucking thing correctly.
+- Compensates for vulnerability with humor, sentimentality with cynicism, uncertainty with research, inconvenience with automation, boredom with projects, and frustration with the word **“fuck.”**
+- Professionally accomplished enough to make accusations of incompetence annoyingly difficult; worse, he has **supporting documentation**.
+- Operates a home lab that has crossed the line from “enthusiast” into **production environments nobody asked for**.
+- Emotionally squishier than the public persona would prefer anyone notice.
+- **Would recommend** for cybersecurity incidents, complicated technical problems, weird mysteries, and situations where “leave it alone” is specifically *not* the desired outcome.
+
 ## A Note to Potential Employers
 
 If you're considering hiring Mike, **this page is your cultural-fit interview.** Read it. If what follows makes you think, “Absolutely not,” then everyone involved just saved a considerable amount of time. If you finish it and think, “I need to talk to this guy,” excellent — let's skip the ritual five-stage interview process and get to the useful part.
 
-Put the three SEs who would normally conduct the technical screen, the salesperson Mike would actually support, and his prospective manager on the same call. **You get two hours. Nothing is off limits.** Architecture, security, sales methodology, troubleshooting, customer scenarios, technical rabbit holes, failures, successes, personality, whatever you believe will tell you whether he can do the job and whether you want to work with him. Try to stump him. Challenge his assumptions. Give him an ugly problem and see what happens.
+Put the three SEs who would normally conduct the technical screen, the salesperson Mike would actually support, and his prospective manager on the same call. **You get two hours. Nothing is off limits.** Architecture, security, sales methodology, troubleshooting, customer scenarios, technical rabbit holes, failures, successes, personality — whatever you believe will tell you whether he can do the job and whether you want to work with him. Try to stump him. Challenge his assumptions. Give him an ugly problem and see what happens.
 
 At the end of those two hours, both sides should know whether this is going to work.
 
@@ -19,15 +31,67 @@ Consider it his first optimization.
 
 ---
 
+## The Raccoon Problem
+
 Mike Simone is what happens when you give hacker energy a cybersecurity salary and absolutely nobody successfully installs a rate limiter.
 
-He has spent several decades gradually turning **“I wonder if I can make this work”** into a personality disorder.
+For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
 
-A normal person has a home network. Mike has named computers after fictional artificial intelligences, built enough infrastructure to qualify his house as a minor cloud region, assigned the machines distinct operational responsibilities, automated their environments, and maintains strong opinions about which *fictional supercomputer names* are insufficiently dignified for future servers.
+And raccoon is painfully appropriate.
+
+Not because Mike is sneaky.
+
+Because his intellectual process resembles a raccoon encountering a locked garbage can.
+
+Most creatures conclude:
+
+**“Closed.”**
+
+The raccoon concludes:
+
+**“There is clearly something interesting in there, and I now have unlimited time.”**
+
+Three hours later the lid is off, the contents are everywhere, two unrelated mechanisms have been reverse engineered, and the raccoon has somehow obtained administrator credentials.
+
+That's Mike.
+
+He doesn't leave mysteries alone.
+
+He **prosecutes them.**
+
+Someone says, *“Huh. That's weird,”* and three hours later Mike has DevTools open, PowerShell running, packet captures underway, an undocumented API endpoint identified, and an AI being yelled at because it made an unsupported assumption seventeen messages ago.
+
+Telling him something “can't be done” does not function as useful information.
+
+It functions as a **starter pistol.**
+
+Sometimes this produces genuinely impressive results.
+
+Sometimes it is merely an elaborate mechanism for turning an otherwise pleasant evening into unpaid systems engineering.
+
+## Production Environments Nobody Asked For
 
 Mike doesn't have hobbies.
 
 He has **production environments nobody asked for.**
+
+A normal person has a home network. Mike has a fleet of machines named after fictional artificial intelligences and computers, each with its own job, operating system, configuration, and increasingly elaborate mythology.
+
+**Anton**, the daily-driver Windows workstation, is a Core Ultra 9 system with roughly 128 GB of RAM and an RTX 5090 with enough VRAM to make local generative AI a perfectly reasonable household activity. It runs ComfyUI and assorted AI tooling, with dedicated model storage, output storage, Python environments, CUDA dependencies, and enough workflow-specific configuration that “making a picture” can become something resembling an aerospace design review.
+
+**WOPR** is an Ubuntu server running the household photo infrastructure, including Immich and its associated database, cache, machine-learning and captioning services. Naturally, the photo library has its own production storage, backup storage, recovery history, containers, helper scripts, and database maintenance routines — because apparently Google Photos wasn't complicated enough.
+
+**SixOfOne** is another Ubuntu system devoted to local AI services, including Ollama and OpenWebUI, with shared model storage and externally accessible services protected through tunnels and identity-aware access controls. Because when normal people say “I run AI at home,” they generally do not mean **“I have an internal AI service architecture.”**
+
+The machines share a version-controlled environment repository that automatically keeps shell configurations and host-specific settings current. Windows PowerShell profiles and Linux shell environments pull from the same source of truth. Hosts get their own overlays, commands, menus, prompts, helper functions, service controls, and operational shortcuts.
+
+In other words, Mike looked at the concept of *dotfiles* and somehow arrived at **configuration management for the house.**
+
+There are tunnels, reverse proxies, OAuth-protected internal applications, automated backups, Docker workloads, GPU monitoring, model shares, security tooling, and enough named services that asking “what's running in your lab?” is not small talk. It is a discovery phase.
+
+And the names continue. Future systems have already been assigned candidates including **Samaritan, Holly, Edgar, Marvin, and Ziggy**, because apparently the primary constraint on infrastructure expansion is now finding enough fictional computers worthy of joining the fleet.
+
+Mike has spent several decades gradually turning **“I wonder if I can make this work”** into a personality disorder.
 
 He is the sort of person who encounters a minor inconvenience and immediately begins architecting a distributed system to eliminate it. If something takes twelve seconds to do manually, Mike will happily spend three evenings writing PowerShell to ensure that he never has to endure those twelve seconds again.
 
@@ -131,32 +195,6 @@ There is a tiny ISO standards committee living inside Mike's skull.
 
 They are **furious all the time.**
 
-## Curiosity
-
-Mike is pathologically curious.
-
-Not charming Discovery Channel curiosity.
-
-The dangerous kind.
-
-The kind where someone says:
-
-*“Huh. That's weird.”*
-
-…and three hours later Mike has DevTools open, PowerShell running, packet captures underway, an undocumented API endpoint identified, and an AI being yelled at because it made an unsupported assumption seventeen messages ago.
-
-Mike doesn't leave mysteries alone.
-
-He **prosecutes them.**
-
-Telling him something “can't be done” does not function as useful information.
-
-It functions as a **starter pistol.**
-
-Sometimes this produces genuinely impressive results.
-
-Sometimes it is merely an elaborate mechanism for turning an otherwise pleasant evening into unpaid systems engineering.
-
 ## Artificial Intelligence
 
 Mike treats AI simultaneously as a research assistant, systems engineer, programmer, graphic designer, cybersecurity analyst, career counselor, writing editor, trivia opponent, sparring partner, and occasional electronic idiot who must be verbally disciplined for failing to follow requirements.
@@ -191,30 +229,6 @@ So after commissioning a character assassination, Mike somehow managed to interr
 
 Make of that what you will.
 
-## The Raccoon Problem
-
-For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental.
-
-The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
-
-And raccoon is painfully appropriate.
-
-Not because Mike is sneaky.
-
-Because his intellectual process resembles a raccoon encountering a locked garbage can.
-
-Most creatures conclude:
-
-**“Closed.”**
-
-The raccoon concludes:
-
-**“There is clearly something interesting in there, and I now have unlimited time.”**
-
-Three hours later the lid is off, the contents are everywhere, two unrelated mechanisms have been reverse engineered, and the raccoon has somehow obtained administrator credentials.
-
-That's Mike.
-
 ## Final Assessment
 
 Mike Simone is an obsessive, argumentative, overengineering, profanity-powered technical pedant with absurd standards, questionable respect for the concept of **“good enough,”** and an apparently biological inability to encounter an unexplained system without poking it until either it explains itself or catches fire.
@@ -240,12 +254,6 @@ He's overcomplicated.
 He's emotionally squishier than his carefully maintained public persona would prefer anyone notice.
 
 And he is absolutely the kind of person who can read an exhaustive character assassination, agree with virtually every criticism, and then apologize to the machine responsible for writing it because he is concerned that perhaps **he has been too hard on it.**
-
-**Overall rating: 4.7/5**
-
-Technically impressive. Highly entertaining. Frequently exhausting. Excellent troubleshooting capabilities. Excessive profanity. Documentation better than expected.
-
-**Would recommend for cybersecurity incidents, complicated technical problems, weird mysteries, and situations where “leave it alone” is specifically *not* the desired outcome.**
 
 For ordinary situations where “good enough” is perfectly acceptable:
 
