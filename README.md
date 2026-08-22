@@ -69,6 +69,8 @@ A normal person has a home network. Mike has a fleet of machines named after fic
 
 **Anton** is the absurdly overpowered Windows daily driver and local generative-AI workstation. **WOPR** runs self-hosted services including the household photo infrastructure. **SixOfOne** handles more local AI and assorted experimental services. Other names are already reserved for future expansion, because apparently infrastructure planning now includes fictional-computer casting decisions.
 
+His servers have names, defined responsibilities, and succession planning. This is more organizational structure than some startups possess.
+
 Several of Mike's public GitHub projects grew directly out of things running in this environment. The machines also share a version-controlled environment repository that keeps shell configuration and host-specific tooling consistent across Windows and Linux.
 
 In other words, Mike looked at the concept of *dotfiles* and somehow arrived at **configuration management for the house.**
@@ -113,7 +115,9 @@ Somewhere, a spelling checker is screaming:
 
 **“OH, NOW WE CARE ABOUT CORRECTNESS?”**
 
-## Professionally
+And because apparently the standards apply even to his own abuse, Mike later reviewed this very character assassination and corrected its grammar on the grounds that **a proper character assassination does not end a sentence with a preposition.**
+
+## Unfortunately, He Has Receipts
 
 Mike is basically a technical peacock.
 
@@ -121,7 +125,7 @@ Unfortunately, he has receipts.
 
 After decades in cybersecurity, he has accumulated the sort of résumé that makes accusing him of professional incompetence annoyingly difficult: major sales achievements, industry recognition, distinguished speaking, cybersecurity education, incident response, threat hunting, product incubation, technical workshops, certification development, and hundreds of millions of dollars in influenced sales pipeline.
 
-And some of those receipts are particularly inconvenient for the prosecution.
+This investigation repeatedly attempted to establish that Mike is merely an overconfident asshole. Unfortunately, the documentary record would not cooperate.
 
 Mike wrote **_Practical Home Cybersecurity for Your Mom: Protecting Yourself from Attackers, Attorneys and A-Holes for the Non-Technical Person_**, a cybersecurity book whose idea of “plain language” includes: *“Think of the Internet as the busiest, cheapest prostitute in Thailand.”*
 
@@ -153,7 +157,7 @@ In other words:
 
 **Mike discovered that being an entertaining smartass was marketable and has been monetizing a personality defect ever since.**
 
-## Scope Management
+## Scope Management, Allegedly
 
 Mike exhibits spectacular scope creep.
 
@@ -177,7 +181,7 @@ There is a tiny ISO standards committee living inside Mike's skull.
 
 They are **furious all the time.**
 
-## Artificial Intelligence
+## Employee Relations: Artificial Intelligence Division
 
 Mike treats AI simultaneously as a research assistant, systems engineer, programmer, graphic designer, cybersecurity analyst, career counselor, writing editor, trivia opponent, sparring partner, and occasional electronic idiot who must be verbally disciplined for failing to follow requirements.
 
@@ -197,15 +201,15 @@ His relationship with AI can generally be summarized as:
 
 **Mike:** THAT IS NOT HELPING.
 
-There is, however, an inconvenient postscript to this characterization.
+The more revealing part came after Mike asked an LLM to produce this deliberately hostile analysis of him.
 
-After reading the original deliberately hostile analysis, Mike's response was not anger. He asked the LLM:
+His response was not anger. He asked:
 
 > *“Am I really that hard on you? I apologize.”*
 
 Which is an exceptionally unhelpful piece of evidence when attempting to establish that the subject is actually an asshole.
 
-The LLM's conclusion was that Mike is demanding and extremely explicit about what he wants, and that his frustration can go from zero to thermonuclear remarkably quickly. But it also observed that most of that heat is directed at the **work**: when something is wrong, Mike says so; when something is excellent, he is equally unambiguous about that.
+The LLM observed that Mike is demanding, extremely explicit about what he wants, and capable of going from zero to thermonuclear remarkably quickly when the work is wrong. It also observed that when the work is excellent, he is equally unambiguous about that.
 
 So after commissioning a character assassination, Mike somehow managed to interrupt it to make sure he hadn't hurt the feelings of software that does not have feelings.
 
@@ -213,29 +217,13 @@ Make of that what you will.
 
 ## Final Assessment
 
-Mike Simone is an obsessive, argumentative, overengineering, profanity-powered technical pedant with absurd standards, questionable respect for the concept of **“good enough,”** and an apparently biological inability to encounter an unexplained system without poking it until either it explains itself or catches fire.
-
-He compensates for vulnerability with humor, sentimentality with cynicism, uncertainty with research, inconvenience with automation, boredom with projects, and frustration with the word **“fuck.”**
-
-He has spent decades becoming extremely competent, which unfortunately reinforced his suspicion that if everyone would simply **do things correctly in the first fucking place**, approximately 80% of life's problems wouldn't exist.
+Mike has spent decades becoming extremely competent, which unfortunately reinforced his suspicion that if everyone would simply **do things correctly in the first fucking place**, approximately 80% of life's problems wouldn't exist.
 
 The remaining 20% can presumably be fixed with PowerShell.
 
-He's exhausting.
+He is obsessive, impatient, vulgar, overcomplicated, and apparently biologically incapable of encountering an unexplained system without poking it until either it explains itself or catches fire. But after requesting the harshest defensible assessment an LLM could produce, one of his first concerns was whether he had been too hard on the LLM.
 
-He's obsessive.
-
-He's pedantic.
-
-He's impatient.
-
-He's vulgar.
-
-He's overcomplicated.
-
-He's emotionally squishier than his carefully maintained public persona would prefer anyone notice.
-
-And he is absolutely the kind of person who can read an exhaustive character assassination, agree with virtually every criticism, and then apologize to the machine responsible for writing it because he is concerned that perhaps **he has been too hard on it.**
+That contradiction may be the most concise description of Mike available: **a profanity-powered technical pedant with the emotional architecture of a raccoon somebody accidentally gave administrator privileges and a conscience.**
 
 For ordinary situations where “good enough” is perfectly acceptable:
 
