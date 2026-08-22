@@ -87,7 +87,7 @@ God help any technology that produces an outcome Mike considers *technically inc
 
 He doesn't merely dislike software behaving badly. He regards it as a **personal betrayal of the Enlightenment.**
 
-Software forgets a login? Unacceptable.
+"Keep me logged in" button fails to deliver on that promise? Unforgivable.
 
 An API behaves inconsistently? We're going to interrogate it until one of you confesses.
 
