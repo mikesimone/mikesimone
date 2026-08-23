@@ -59,11 +59,11 @@ Sometimes this produces genuinely impressive results.
 
 Sometimes it is merely an elaborate mechanism for turning an otherwise pleasant evening into unpaid systems engineering.
 
-## Production Environments Nobody Asked For
+## Production Environments Nobody Requested
 
 Mike doesn't have hobbies.
 
-He has **production environments nobody asked for.**
+He has **production environments nobody requested.**
 
 A normal person has a home network. Mike has a fleet of machines named after fictional artificial intelligences and computers, each with its own job and increasingly elaborate mythology.
 
