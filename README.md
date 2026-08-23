@@ -7,13 +7,9 @@
 
 ## Executive Summary
 
-- **Overall rating: 4.7/5.** Technically impressive. Highly entertaining. Frequently exhausting. Excessive profanity. Documentation better than expected.
-- Mike has spent several decades turning **curiosity into a personality disorder**, with no apparent rate limiter installed.
-- Obsessive, argumentative, overengineering, profanity-powered technical pedant with no concept of **“good enough.”**
-- Professionally accomplished enough to make maintaining impostor syndrome annoyingly difficult; worse, he has **supporting documentation**.
-- Operates a home lab that has crossed the line from “enthusiast” into **production environments nobody requested**.
-- Hides an emotionally squishy interior behind a caustic public persona.
-- **Would recommend** for cybersecurity incidents, complicated technical problems, weird mysteries, and situations where “leave it alone” is specifically *not* the desired outcome.
+- Mike has spent several decades turning **curiosity into a personality disorder**, with no apparent rate limiter installed: obsessive, argumentative, overengineering, profanity-powered, and largely unconvinced that **“good enough”** is a legitimate engineering state.
+- Professionally accomplished enough to make maintaining impostor syndrome annoyingly difficult, with **supporting documentation**; personally inclined to turn hobbies into production environments and other people's technical problems into his own.
+- **Overall rating: 4.7/5.** Technically impressive. Highly entertaining. Frequently exhausting. Excessive profanity. Emotionally squishier than advertised. **Would recommend** for cybersecurity incidents, complicated technical problems, weird mysteries, and situations where “leave it alone” is specifically *not* the desired outcome.
 
 ## A Note to Potential Employers
 
