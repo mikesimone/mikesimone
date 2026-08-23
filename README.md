@@ -241,13 +241,15 @@ After commissioning a character assassination, Mike somehow interrupted it to ma
 
 For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
 
-There are two particularly effective ways to discover that the cynical exterior is mostly packaging: **Lydia, his wife, and Stormy, his mistress.**
+There are two particularly effective ways to discover that the cynical exterior is mostly packaging: **Lydia, his wife, and Stormy, his mistress — a custom-wrapped purple Tesla Model S Plaid.**
 
-Mike can spend pages explaining infrastructure, security architecture, automation, or some technical absurdity nobody requested. Ask about the people he loves and suddenly the vocabulary changes. Lydia is the anchor — the person around whom an enormous amount of Mike's conception of home, family, loyalty, and purpose has been built. Stormy occupies a different but also deeply important place in his life, and Mike makes remarkably little effort to pretend that either relationship can be reduced to something tidy enough for strangers' comfort.
+Yes. His mistress is a car.
 
-![Lydia, Stormy, and a conspicuously purple Tesla](images/Lydia.jpg)
+Mike can spend pages explaining infrastructure, security architecture, automation, or some technical absurdity nobody requested. Ask about the things he loves and suddenly the vocabulary changes. Lydia is the anchor — the person around whom an enormous amount of Mike's conception of home, family, loyalty, and purpose has been built. Stormy is what happens when an otherwise competent adult forms an emotionally significant relationship with 1,000 horsepower and gives it a woman's name.
 
-For a man who approaches most of existence as though it were an engineering problem awaiting sufficient profanity, **his important relationships are one of the few things he does not attempt to optimize. He just loves people very fucking hard.**
+![Lydia with Stormy, Mike's custom-wrapped purple Tesla](images/Lydia.jpg)
+
+For a man who approaches most of existence as though it were an engineering problem awaiting sufficient profanity, **his important relationships are one of the few things he does not attempt to optimize. He just loves people — and, apparently, one extremely fast automobile — very fucking hard.**
 
 The cynical, sarcastic, argumentative, profanity-armored guy is substantially softer than he wants the packaging to advertise. He gets attached. He remembers kindness. He wants to teach people things. He has an unfortunate tendency to adopt other people's problems and wants things to be better because he was there.
 
