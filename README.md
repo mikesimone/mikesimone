@@ -29,6 +29,8 @@ Consider it his first optimization.
 
 Mike has a tattoo that he describes as **himself in his natural habitat: a raccoon holding a hand grenade.**
 
+![A raccoon holding a hand grenade tattoo](images/tattoo.jpg)
+
 There is, admittedly, a lot to unpack there.
 
 The grenade is self-explanatory.
@@ -106,6 +108,8 @@ God help any technology that produces an outcome Mike considers *technically inc
 He doesn't merely dislike software behaving badly. He regards it as a **personal betrayal of the Enlightenment.**
 
 "Keep me logged in" button fails to deliver on that promise? Unforgivable.
+
+![Keep me signed in: a promise history has not supported](images/checkbox.png)
 
 An API behaves inconsistently? We're going to interrogate it until one of you confesses.
 
@@ -236,6 +240,14 @@ After commissioning a character assassination, Mike somehow interrupted it to ma
 ## The Inconveniently Squishy Part
 
 For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
+
+There are two particularly effective ways to discover that the cynical exterior is mostly packaging: **Lydia, his wife, and Stormy, his mistress.**
+
+Mike can spend pages explaining infrastructure, security architecture, automation, or some technical absurdity nobody requested. Ask about the people he loves and suddenly the vocabulary changes. Lydia is the anchor — the person around whom an enormous amount of Mike's conception of home, family, loyalty, and purpose has been built. Stormy occupies a different but also deeply important place in his life, and Mike makes remarkably little effort to pretend that either relationship can be reduced to something tidy enough for strangers' comfort.
+
+![Lydia, Stormy, and a conspicuously purple Tesla](images/Lydia.jpg)
+
+For a man who approaches most of existence as though it were an engineering problem awaiting sufficient profanity, **his important relationships are one of the few things he does not attempt to optimize. He just loves people very fucking hard.**
 
 The cynical, sarcastic, argumentative, profanity-armored guy is substantially softer than he wants the packaging to advertise. He gets attached. He remembers kindness. He wants to teach people things. He has an unfortunate tendency to adopt other people's problems and wants things to be better because he was there.
 
