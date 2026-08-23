@@ -105,7 +105,7 @@ God help any technology that produces an outcome Mike considers *technically inc
 
 He doesn't merely dislike software behaving badly. He regards it as a **personal betrayal of the Enlightenment.**
 
-The “Keep me logged in” checkbox — checked — fails to actually keep him logged in? Unforgivable.
+"Keep me logged in" button fails to deliver on that promise? Unforgivable.
 
 An API behaves inconsistently? We're going to interrogate it until one of you confesses.
 
@@ -253,7 +253,7 @@ The remaining 20% can presumably be fixed with PowerShell.
 
 He is obsessive, impatient, vulgar, overcomplicated, and apparently biologically incapable of encountering an unexplained system without poking it until either it explains itself or catches fire. But after requesting the harshest defensible assessment an LLM could produce, one of his first concerns was whether he had been too hard on the LLM.
 
-That contradiction may be the most concise description of Mike available: **a profanity-powered technical pedant with the emotional architecture of a raccoon to whom somebody accidentally gave administrator credentials and a conscience.**
+That contradiction may be the most concise description of Mike available: **a profanity-powered technical pedant with the emotional architecture of a raccoon to whom somebody accidentally gave administrator privileges and a conscience.**
 
 For ordinary situations where “good enough” is perfectly acceptable:
 
