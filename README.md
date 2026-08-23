@@ -27,7 +27,13 @@ Consider it his first optimization.
 
 ## The Raccoon Problem
 
-Raccoon is painfully appropriate.
+Mike has a tattoo that he describes as **himself in his natural habitat: a raccoon holding a hand grenade.**
+
+There is, admittedly, a lot to unpack there.
+
+The grenade is self-explanatory.
+
+The raccoon requires slightly more context — and is painfully appropriate.
 
 Not because Mike is sneaky.
 
