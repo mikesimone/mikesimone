@@ -241,13 +241,13 @@ After commissioning a character assassination, Mike somehow interrupted it to ma
 
 For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
 
-There are two particularly effective ways to discover that the cynical exterior is mostly packaging: **Lydia, his wife, and Stormy, his mistress — a custom-wrapped purple Tesla Model S Plaid.**
+There are two particularly effective ways to discover that the cynical exterior is mostly packaging: **Lydia, his wife, and Stormy, the custom-wrapped purple Tesla Model S Plaid that Lydia refers to as his mistress.**
 
-Yes. His mistress is a car.
+Mike doesn't have the heart to tell her that **a mistress would probably be cheaper.**
 
 Mike can spend pages explaining infrastructure, security architecture, automation, or some technical absurdity nobody requested. Ask about the things he loves and suddenly the vocabulary changes. Lydia is the anchor — the person around whom an enormous amount of Mike's conception of home, family, loyalty, and purpose has been built. Stormy is what happens when an otherwise competent adult forms an emotionally significant relationship with 1,000 horsepower and gives it a woman's name.
 
-![Lydia with Stormy, Mike's custom-wrapped purple Tesla](images/Lydia.jpg)
+![Mike is one of the few people who can get his wife to pose for a photo with his mistress.](images/Lydia.jpg)
 
 For a man who approaches most of existence as though it were an engineering problem awaiting sufficient profanity, **his important relationships are one of the few things he does not attempt to optimize. He just loves people — and, apparently, one extremely fast automobile — very fucking hard.**
 
