@@ -189,6 +189,10 @@ Twenty minutes later there is a requirements document involving identity preserv
 
 Mike can turn **making a picture** into something resembling an aerospace design review.
 
+The artwork isn't entirely technical experimentation, either. Mike has spent years using anthropomorphic characters as a strangely sincere form of identity work — including personal characters, anthro interpretations of people he loves, more than fifteen tattoos, and a fursona called **“Grumpy Care Bear,”** because apparently ordinary introspection lacked sufficient GPU requirements.
+
+This would be easier to mock if he weren't completely unembarrassed by it.
+
 His standards are similarly ridiculous.
 
 Things aren't simply good or bad.
@@ -204,10 +208,6 @@ They are **furious all the time.**
 ## Employee Relations: Artificial Intelligence Division
 
 Mike treats AI simultaneously as a research assistant, systems engineer, programmer, graphic designer, cybersecurity analyst, career counselor, writing editor, trivia opponent, sparring partner, and occasional electronic idiot who must be verbally disciplined for failing to follow requirements.
-
-He has essentially recreated the computer from *Star Trek*, except Captain Picard now says:
-
-> *“Computer, why the FUCK did you downgrade NumPy?”*
 
 His relationship with AI can generally be summarized as:
 
@@ -227,13 +227,11 @@ His response was not anger. He asked:
 
 > *“Am I really that hard on you? I apologize.”*
 
-Which is an exceptionally unhelpful piece of evidence when attempting to establish that the subject is actually an asshole.
+Which is exceptionally inconvenient evidence when attempting to establish that the subject is actually an asshole.
 
-The LLM observed that Mike is demanding, extremely explicit about what he wants, and capable of going from zero to thermonuclear remarkably quickly when the work is wrong. It also observed that when the work is excellent, he is equally unambiguous about that.
+After commissioning a character assassination, Mike somehow interrupted it to make sure he hadn't hurt the feelings of software that does not have feelings.
 
-So after commissioning a character assassination, Mike somehow managed to interrupt it to make sure he hadn't hurt the feelings of software that does not have feelings.
-
-Make of that what you will.
+**Make of that what you will.**
 
 ## The Inconveniently Squishy Part
 
