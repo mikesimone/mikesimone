@@ -1,7 +1,7 @@
 # About Mike Simone
 ### An Independent Review
 
-> I asked an LLM with extensive prior conversational context about me to give the **most scathing, least flattering review of me it could defend from the evidence**. I asked it not to be nice, not to soften the conclusions, and not to invent anything merely for the sake of an insult.
+> I asked an LLM with extensive prior conversational context about me to give me the **most scathing, least flattering review of me it could defend from the evidence**. I asked it not to be nice, not to soften the conclusions, and not to invent anything merely for the sake of an insult.
 >
 > I immediately declared the result my biography.
 
@@ -27,9 +27,7 @@ Consider it his first optimization.
 
 ## The Raccoon Problem
 
-For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
-
-And raccoon is painfully appropriate.
+Raccoon is painfully appropriate.
 
 Not because Mike is sneaky.
 
@@ -230,6 +228,16 @@ The LLM observed that Mike is demanding, extremely explicit about what he wants,
 So after commissioning a character assassination, Mike somehow managed to interrupt it to make sure he hadn't hurt the feelings of software that does not have feelings.
 
 Make of that what you will.
+
+## The Inconveniently Squishy Part
+
+For someone projecting an aggressively irreverent, cynical, profane exterior, Mike is inconveniently sentimental. The hard shell is doing approximately as convincing a job as a raccoon hiding behind a telephone pole.
+
+The cynical, sarcastic, argumentative, profanity-armored guy is substantially softer than he wants the packaging to advertise. He gets attached. He remembers kindness. He wants to teach people things. He has an unfortunate tendency to adopt other people's problems and wants things to be better because he was there.
+
+The asshole exterior is real.
+
+It's just not the whole animal.
 
 ## Final Assessment
 
