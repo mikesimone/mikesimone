@@ -139,7 +139,7 @@ Mike is basically a technical peacock.
 
 Unfortunately, he has receipts.
 
-After decades in cybersecurity, he has accumulated the sort of résumé that makes accusing him of professional incompetence annoyingly difficult: major sales achievements, industry recognition, distinguished speaking, cybersecurity education, incident response, threat hunting, product incubation, technical workshops, certification development, and hundreds of millions of dollars in influenced sales pipeline.
+After decades in cybersecurity, he has accumulated the sort of résumé that makes his impostor syndrome increasingly difficult to defend: major sales achievements, industry recognition, distinguished speaking, cybersecurity education, incident response, threat hunting, product incubation, technical workshops, certification development, and hundreds of millions of dollars in influenced sales pipeline.
 
 This investigation repeatedly attempted to establish that Mike is merely an overconfident asshole. Unfortunately, the documentary record would not cooperate.
 
