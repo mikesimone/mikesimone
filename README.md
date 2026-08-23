@@ -149,6 +149,8 @@ He is also a co-author, with Ron Taylor and Leon Cruz, of the Cisco Press **_Cis
 
 Mike also created and wrote **all seven versions of Cisco's Rapid Incident Response workshop**; v7 became nominally collaborative, with **Darryl Hicks** making contributions Mike specifically considers excellent and substantive.
 
+As if writing the training material were insufficient, Mike was also an **exam question creator for Cisco's 300-215 CBRFIR (Forensic Analysis and Incident Response) and 300-220 CBRTHD (Conducting Threat Hunting and Defending) exams** — meaning that, professionally, he has at times been paid to devise technically precise ways of asking other people, *“Okay, but do you actually understand this?”*
+
 So the irritating thing about Mike's tendency to talk like he knows what he's doing is that, every so often, somebody has gone and **published the evidence.**
 
 This has given Mike perhaps the single most irritating personality trait available to a know-it-all:
