@@ -141,16 +141,41 @@ This stage is where most award events are correctly discarded.
 Pipeline per awardee:
 
 1. **Normalize** the legal entity name (strip "LLC", "Inc.", DBA aliases).
-2. **Resolve to a ticker** via a symbol-lookup source (e.g. an equities
-   reference dataset or the broker's asset endpoint). Cache results; maintain a
-   manual override map for known tricky names.
-3. **Public-company filter** — if no ticker resolves with confidence, drop.
-4. **Options-listed filter** — confirm the underlying has a listed options
-   chain via the broker.
-5. **Liquidity filter** — see §6.
+2. **Deterministic lookup first** — resolve to a ticker via a symbol-reference
+   source / the broker's asset endpoint, plus a hand-maintained **override map**
+   for known tricky names. Cache all results.
+3. **AI assist (only when the deterministic lookup is inconclusive).** An LLM
+   (Claude API) proposes a candidate public-company match for the normalized
+   name. This is a **suggestion, never authoritative** — see the guardrails
+   below.
+4. **Public-company filter** — if no ticker resolves with confidence, drop.
+5. **Options-listed filter** — confirm the underlying has a listed options
+   chain via the broker/market-data source.
+6. **Liquidity filter** — see §6.
 
 A low-confidence match is treated as **no match** (fail closed). We would
 rather miss a trade than trade the wrong company.
+
+### AI name-match assist — hard boundaries
+
+The AI touches **exactly one step: proposing a name→ticker candidate.** It has
+no role in whether to trade, sizing, or exits — those are pure code (§13a).
+Every AI suggestion is caged:
+
+- **Verified before use.** A proposed ticker must independently resolve to a
+  real, currently-listed symbol with an options chain (steps 5–6). If it
+  doesn't, the suggestion is discarded — a hallucinated ticker cannot become a
+  trade.
+- **Confidence threshold.** Below a configured confidence, treat as no match.
+- **Structured, constrained output.** The model returns a ticker (or "no
+  match") + confidence + brief rationale, not free-form instructions the rest
+  of the system acts on.
+- **Cached & override-able.** Accepted matches are cached and can be pinned or
+  corrected in the override map, so a name is only ever reasoned about once and
+  a human can overrule it permanently.
+- **Untrusted input.** Awardee names come from external data; they are passed
+  as data to the model, never as instructions, and the model's output only ever
+  selects a ticker — it can never widen risk limits or trigger an order.
 
 ---
 
@@ -472,6 +497,46 @@ Explicit, boring, deterministic handling — fail closed everywhere.
    `live` behind an explicit config change — start with minimal size.
 9. *(Optional)* Alpaca broker-paper adapter if we ever want broker-side paper
    fills instead of the local ledger.
+
+---
+
+## 13a. Decision engine: deterministic core
+
+**All trade decisions are plain, testable code — not AI.** The risk gate
+(R1–R6), sizing, tradeability gate, contract selection, and exits are
+deterministic and unit-tested, identical on every run. No LLM decides whether
+to trade, how large, or when to exit. The *only* AI in the system is the caged
+name→ticker suggestion in §5, which cannot place an order or alter a risk
+limit. This is a deliberate choice: the whole point of the project is
+**provable** risk limits, and only code gives you that.
+
+---
+
+## 14. Runtime & hosting
+
+**Decision: runs on a machine the owner controls, as a scheduled command.**
+
+- **Host:** a machine the owner owns and keeps on most of the time (desktop /
+  mini-PC / Pi). Keeps the Schwab OAuth tokens on the owner's own hardware —
+  preferable for anything touching a brokerage account — and makes the weekly
+  browser re-auth (§3) painless.
+- **Execution model: scheduled invocations, not a long-running daemon.** A
+  scheduler fires the bot; it does one pass (poll → resolve → gate → record or
+  order), persists state to disk, and exits. Restart-safe by construction and
+  matches the "bot restarts → recovers from state store" behavior in §11.
+  - **Linux/macOS:** cron or a systemd timer.
+  - **Windows:** Task Scheduler.
+- **Cadence:** poll sources every 30–60 min (per-source, per config §10); the
+  shadow-ledger `paper-mark` runs once daily; `paper-report` on demand.
+- **State on disk:** SQLite (seen awards, live positions) + `paper_ledger.csv`.
+  Both live in the project's `data/` dir on that machine; nothing to persist
+  externally.
+- **Secrets** live in a local `.env` / token file on that machine, never in the
+  repo. The Schwab token file is refreshed programmatically within its 7-day
+  window and re-minted by the owner via `schwab-auth` when it lapses.
+- **OS to target:** TBD from the owner (decides cron/systemd vs Task
+  Scheduler). The Python core is OS-agnostic; only the scheduler wiring and
+  file paths differ.
 
 ---
 
