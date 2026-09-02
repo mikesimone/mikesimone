@@ -514,18 +514,23 @@ limit. This is a deliberate choice: the whole point of the project is
 
 ## 14. Runtime & hosting
 
-**Decision: runs on a machine the owner controls, as a scheduled command.**
+**Decision: runs on `Six` (a Linux machine the owner controls), as a scheduled
+command driven by systemd timers.**
 
-- **Host:** a machine the owner owns and keeps on most of the time (desktop /
-  mini-PC / Pi). Keeps the Schwab OAuth tokens on the owner's own hardware —
-  preferable for anything touching a brokerage account — and makes the weekly
-  browser re-auth (§3) painless.
+- **Host:** `Six`, a Linux box the owner owns and keeps on. Keeps the Schwab
+  OAuth tokens on the owner's own hardware — preferable for anything touching a
+  brokerage account — and makes the weekly browser re-auth (§3) painless.
 - **Execution model: scheduled invocations, not a long-running daemon.** A
-  scheduler fires the bot; it does one pass (poll → resolve → gate → record or
+  timer fires the bot; it does one pass (poll → resolve → gate → record or
   order), persists state to disk, and exits. Restart-safe by construction and
   matches the "bot restarts → recovers from state store" behavior in §11.
-  - **Linux/macOS:** cron or a systemd timer.
-  - **Windows:** Task Scheduler.
+- **Scheduler: systemd timers** (preferred over cron on `Six`):
+  - `gcbot-poll.timer` — every 30–60 min: run the poll/signal pass.
+  - `gcbot-mark.timer` — once daily: `paper-mark` on the shadow ledger.
+  - Timers invoke oneshot services running the CLI under a dedicated user, with
+    `journalctl` logging and `Restart=`/`OnFailure=` semantics for free. Unit
+    files ship in the repo (`deploy/systemd/`) as install templates.
+  - `paper-report` stays a manual/on-demand command.
 - **Cadence:** poll sources every 30–60 min (per-source, per config §10); the
   shadow-ledger `paper-mark` runs once daily; `paper-report` on demand.
 - **State on disk:** SQLite (seen awards, live positions) + `paper_ledger.csv`.
