@@ -2,7 +2,7 @@
 
 **Status:** Draft (design phase — no trading code yet)
 **Author:** Design pass for the automated contract-award options watcher
-**Stack:** Python 3.11+, Alpaca (paper first), official government data APIs
+**Stack:** Python 3.11+, Schwab Trader API (live) + local shadow-ledger paper mode, official government data APIs
 
 ---
 
@@ -54,37 +54,59 @@ is **do nothing** (fail closed).
 
 ---
 
-## 3. Broker choice: Alpaca
+## 3. Broker choice: Schwab (primary)
 
-**Decision: Alpaca, paper-trading first, live later via config swap.**
+**Decision: Charles Schwab Trader API as the live broker. Validation happens
+via a local shadow-ledger paper mode (§8.1), not a broker sandbox. Alpaca is
+kept as an optional broker-paper fallback only.**
 
-Rationale:
+Rationale for Schwab:
 
-- **Official, supported API with real API keys** — we are not impersonating a
-  mobile app.
-- Real SEC-registered / FINRA-member broker-dealer: paper and live are the
-  same API, differing only by base URL + keys.
-- First-class `alpaca-py` SDK, options trading support, free paper environment
-  with real market data.
+- **Official, supported API.** The **Schwab Trader API**
+  (`developer.schwab.com`) — successor to the retired TD Ameritrade API after
+  Schwab absorbed TDA — is OAuth 2.0, official, and trades your real Schwab
+  brokerage account. Not reverse-engineered.
+- **Options approval already in place** on the owner's Schwab account — no
+  second approval process to start over on.
+- Mature community wrappers around the *official* API exist
+  (`schwab-py`, `schwabdev`), so we don't hand-roll OAuth.
+- Two registrable products: **"Accounts and Trading" (Trader API)** for
+  orders/positions and **"Market Data"** for quotes and option chains. Both
+  support options.
+
+### Schwab-specific constraints (design must accommodate)
+
+| Constraint | Impact on this build |
+|-----------|----------------------|
+| **No paper/sandbox environment.** Every Trader-API order is a real live order against real money. | Broker-side paper isn't available. Pre-live validation uses the **local shadow ledger (§8.1)** instead. `dry_run` and shadow mode carry the validation weight Alpaca paper would have. |
+| **App approval gate.** A registered app sits "pending" until Schwab **approves it for production**; can take days. | One-time manual prerequisite before any live order. Doesn't block dry-run/shadow work, which needs only market data (read-only). |
+| **Refresh token expires every 7 days** and re-auth needs a browser login step. | Bot needs a small re-auth helper and a weekly manual login. Token store + refresh handling is an explicit part of the Schwab adapter. |
 
 ### Why not Robinhood
 
 Robinhood has **no official public trading API**. The only access is
 unofficial reverse-engineered libraries hitting its private mobile endpoints,
-which:
+which violate its Terms of Service, break without notice, and risk account
+lockout. That path is explicitly rejected for this build.
 
-- Violate Robinhood's Terms of Service.
-- Break without notice when endpoints change.
-- Risk account flagging/lockout.
+### Alpaca (optional fallback only)
 
-That path is explicitly rejected for this build.
+Alpaca remains documented because it offers a genuine free **broker paper
+environment** with real market data, which Schwab lacks. If we ever want
+broker-side paper fills (rather than the local shadow ledger), the Alpaca
+adapter provides it. Not the primary path.
 
 ### Account prerequisites (manual, one-time)
 
-- Alpaca account created.
-- **Options trading approval** enabled (long-call tier is the lowest level;
-  required even in paper). Orders will reject until this is granted.
-- API key + secret for paper; separate key/secret for live.
+- Schwab brokerage account with **options approval** (already held).
+- Register a developer app at `developer.schwab.com` for both the **Trader
+  API** and **Market Data API**; obtain **App Key + Secret**.
+- Get the app **approved for production** before enabling `live` mode.
+- Complete the initial OAuth login to mint the first refresh token; plan for
+  weekly re-auth.
+- Market Data API access is enough on its own for `dry_run` and `shadow`
+  modes (read-only quotes/chains) — no production trading approval needed to
+  start validating.
 
 ---
 
@@ -180,6 +202,63 @@ A separate monitor loop, independent of the poller:
   auto-exercise/assignment mechanics (config: `close_before_expiry_days`,
   default 2).
 
+### 8.1 Local paper mode (shadow ledger)
+
+Because Schwab has no paper/sandbox, pre-live validation is done with a
+**local shadow ledger** — the bot records what it *would* have bought and
+re-scores those hypothetical positions daily against real market data. No
+broker order is ever placed in this mode. Intended to run for ~a month before
+any live trading.
+
+**On signal (shadow mode):** instead of submitting an order, append one row to
+`paper_ledger.csv` capturing exactly the trade that would have been placed:
+
+| Column | Meaning |
+|--------|---------|
+| `entry_ts` | When the signal fired |
+| `award_ref` | Source award key (PIID / award ID) that triggered it |
+| `ticker` | Underlying |
+| `option_symbol` | The specific contract (OCC symbol) |
+| `right` | Always `CALL` (R1) |
+| `strike` | Strike price |
+| `expiry` | Contract expiration date |
+| `entry_price` | Per-contract premium we would have paid (ask/mid at signal) |
+| `qty` | Number of contracts (from the §7 sizing, capped at 20% BP) |
+| `debit` | `entry_price × qty × 100` — the capital at risk |
+| `take_profit_price` | `entry_price × (1 + take_profit_pct)` |
+| `status` | `OPEN` at entry |
+| `exit_ts`, `exit_price`, `realized_pl`, `outcome` | Filled in when the row closes |
+
+**Daily mark (`paper-mark` job, once per day):** for every `OPEN` row, pull a
+current option quote (read-only market data — Schwab Market Data API or
+whichever quote source is configured) and apply the *same* exit rules the live
+monitor would:
+
+1. **Profit target hit** — if current bid ≥ `take_profit_price`:
+   `status=CLOSED`, `outcome=PROFIT`, `exit_price` = current bid,
+   `realized_pl = (exit_price − entry_price) × qty × 100`.
+2. **Expired** — if today > `expiry` and not already closed: settle at
+   expiration intrinsic value (OTM → `0`, i.e. **expired worthless**; ITM →
+   intrinsic). `status=EXPIRED`, `outcome=WORTHLESS` or `EXPIRED_ITM`,
+   `realized_pl` = settlement − debit (a loss capped at the debit, per R2).
+3. **Still open** — otherwise leave `OPEN`, optionally stamping a
+   `last_mark_price` / `last_mark_ts` for the running unrealized view.
+
+**Reporting:** a `paper-report` command summarizes the ledger — count of
+open/closed/expired, total hypothetical P/L, win rate, average hold time —
+so after ~a month there's a concrete read on whether the signal is worth real
+money. This is deterministic and fully offline from any order placement.
+
+Notes:
+- Fills are **optimistic-but-honest**: entry at the ask/mid we actually
+  observed, exit at the real bid on the mark day. No look-ahead — each mark
+  uses only data available on that date.
+- The shadow ledger reuses the **same risk gate and sizing** as live, so it
+  validates the whole decision path, not just the idea.
+- `dry_run` (log-only, nothing persisted) and `shadow` (CSV ledger, daily
+  marks) are distinct; `shadow` is the month-long validation mode, `dry_run`
+  is a quick "show me what it would do right now."
+
 ---
 
 ## 9. Architecture
@@ -206,14 +285,15 @@ A separate monitor loop, independent of the poller:
         │                 └────────┬─────────┘                   │
         │                          │ approved order              │
         │                 ┌────────▼─────────┐                   │
-        │                 │  Broker adapter  │◀──────────────────┘
-        │                 │ (Alpaca paper/   │
-        │                 │  live)           │
+        │                 │  Execution sink  │◀──────────────────┘
+        │                 │ shadow: CSV ledger│
+        │                 │ live: Schwab API  │
+        │                 │ dry_run: log only │
         │                 └────────┬─────────┘
         │                          │
    ┌────▼──────────────────────────▼─────┐
-   │   Local state store (SQLite)         │
-   │ seen awards, open positions, orders  │
+   │   Local state store (SQLite + CSV)   │
+   │ seen awards, positions, paper ledger │
    └──────────────────────────────────────┘
 ```
 
@@ -242,18 +322,28 @@ govt-contract-options/
       sizing.py             # 20% buying-power sizing
     broker/
       base.py               # Broker interface
-      alpaca.py             # paper/live via config
-      dryrun.py             # logs orders, places nothing (default)
+      schwab.py             # PRIMARY: OAuth, token refresh, live orders
+      alpaca.py             # optional broker-paper fallback
+      dryrun.py             # logs orders, places nothing
+    marketdata/
+      base.py               # read-only quote/chain interface
+      schwab.py             # Schwab Market Data API (quotes, option chains)
+    paper/
+      ledger.py             # shadow ledger: append signal, daily mark, report (§8.1)
     engine/
       poller.py
-      monitor.py
+      monitor.py            # live exit loop (take-profit, expiry)
     state/
-      store.py              # SQLite persistence
-    cli.py                  # entrypoints: run, backfill, status, dry-run
+      store.py              # SQLite persistence (seen awards, live positions)
+    cli.py                  # run, backfill, status, dry-run,
+                            #   paper-mark, paper-report, schwab-auth
+  data/
+    paper_ledger.csv        # shadow-mode hypothetical trades (git-ignored)
   tests/
     test_risk_gate.py       # invariants R1–R6
     test_sizing.py
     test_tradeability.py
+    test_paper_ledger.py    # entry/mark/expiry accounting
 ```
 
 ---
@@ -264,7 +354,17 @@ govt-contract-options/
 the file.
 
 ```yaml
-mode: dry_run            # dry_run | paper | live  (dry_run = no orders placed)
+mode: shadow             # dry_run | shadow | live
+                         #   dry_run = log only, nothing persisted
+                         #   shadow  = local CSV ledger + daily marks (§8.1), no broker orders
+                         #   live    = real Schwab orders
+
+broker: schwab           # schwab (primary) | alpaca (optional broker-paper fallback)
+market_data: schwab      # read-only quote/chain source (used by shadow + live)
+
+paper:                   # shadow-mode ledger settings
+  ledger_path: data/paper_ledger.csv
+  run_days: 30           # intended validation window before considering live
 
 risk:
   max_pct_buying_power: 0.20      # R3
@@ -298,7 +398,9 @@ sources:
 ```
 
 Secrets (env / `.env`, never committed):
-`ALPACA_API_KEY`, `ALPACA_API_SECRET`, `ALPACA_PAPER` (bool), `SAM_API_KEY`.
+`SCHWAB_APP_KEY`, `SCHWAB_APP_SECRET`, `SCHWAB_CALLBACK_URL`,
+`SCHWAB_TOKEN_PATH` (path to the cached OAuth token file), `SAM_API_KEY`.
+Optional fallback: `ALPACA_API_KEY`, `ALPACA_API_SECRET`, `ALPACA_PAPER`.
 
 ---
 
@@ -316,11 +418,16 @@ Explicit, boring, deterministic handling — fail closed everywhere.
 | Bot restarts | State store recovers seen-awards and open-positions; monitor resumes. |
 | Spread/liquidity check fails at submit | Skip. Better no fill than a trapped position. |
 | Config out of bounds (e.g. max_pct > 1.0) | Refuse to start. Validate on load. |
+| Schwab refresh token expired (7-day) | Live mode refuses to place orders and surfaces a clear "re-auth needed" message; `schwab-auth` command re-mints it. Never trades on a stale token. |
+| Quote source unavailable during a shadow daily-mark | Skip that mark for the day; row stays `OPEN`. Marks are idempotent, so a missed day self-heals on the next run. |
+| `mode: live` selected but app not production-approved | Refuse to start live; direct to dry_run/shadow. |
 
 ### Guardrails
 
-- **`dry_run` is the default mode.** It logs the exact order it *would* place
-  and submits nothing. Paper and live are explicit opt-ins.
+- **`shadow` is the default working mode** (local ledger, no broker orders);
+  `dry_run` logs without persisting; `live` is an explicit, deliberate opt-in
+  that additionally requires a production-approved Schwab app and a valid
+  token.
 - Risk gate (`risk/gate.py`) is **pure and unit-tested** against R1–R6 so the
   invariants are provable, not incidental.
 - A global **daily order cap** and **max concurrent open positions** cap
@@ -352,9 +459,19 @@ Explicit, boring, deterministic handling — fail closed everywhere.
 3. **Resolve + tradeability**: name→ticker + liquidity gate. See how many
    awards survive to "tradeable."
 4. **Risk gate + sizing**, fully unit-tested against R1–R6.
-5. **Alpaca adapter** in paper mode; end-to-end dry-run → paper.
-6. Run in paper for a while, observe, tune thresholds.
-7. Only then consider live, behind an explicit config flip.
+5. **Shadow ledger (§8.1)**: wire signals → `paper_ledger.csv`, plus the
+   `paper-mark` (daily re-score) and `paper-report` commands. Needs only a
+   read-only quote source, so no live trading approval required to start.
+6. **Run in shadow mode ~a month.** Review the ledger report — win rate,
+   hypothetical P/L, how many signals were even tradeable — and tune
+   thresholds. This is the real go/no-go on the strategy.
+7. **Schwab adapter**: OAuth + token refresh (`schwab-auth`), Market Data for
+   quotes/chains, and live order placement. Validate end-to-end in `dry_run`
+   first (real signals, real quotes, no orders).
+8. Only after a convincing shadow run **and** production app approval, flip to
+   `live` behind an explicit config change — start with minimal size.
+9. *(Optional)* Alpaca broker-paper adapter if we ever want broker-side paper
+   fills instead of the local ledger.
 
 ---
 
