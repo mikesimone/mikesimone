@@ -1,0 +1,46 @@
+mode: shadow             # dry_run | shadow | live
+                         #   dry_run = log only, nothing persisted
+                         #   shadow  = local CSV ledger + daily marks, no broker orders
+                         #   live    = real Schwab orders
+
+broker: schwab           # schwab (primary) | alpaca (optional broker-paper fallback)
+market_data: schwab      # read-only quote/chain source (used by shadow + live)
+
+state_path: data/state.sqlite3
+
+paper:
+  ledger_path: data/paper_ledger.csv
+  run_days: 30
+  buying_power: 10000    # notional bankroll the shadow ledger sizes against
+
+risk:
+  max_pct_buying_power: 0.20      # R3 (hard ceiling 0.20)
+  take_profit_pct: 0.50           # R4
+  max_dollar_per_trade: null      # optional hard $ cap on top of the 20%
+  long_calls_only: true           # R1 (structural; must stay true)
+  max_orders_per_day: 3
+  max_open_positions: 5
+
+signal:
+  min_award_dollars: 1000000
+  set_aside_types: [8a, WOSB, SDVOSB, HUBZone, SBA]
+
+selection:
+  strike_moneyness: first_otm     # first_otm | atm
+  min_days_to_expiry: 30
+  max_days_to_expiry: 90
+
+tradeability:
+  min_open_interest: 100
+  max_spread_pct: 0.15
+  require_nonzero_bid: true
+
+exit:
+  close_before_expiry_days: 2
+
+sources:
+  usaspending: { enabled: true,  poll_minutes: 30, lookback_days: 3 }
+  sam:         { enabled: false, poll_minutes: 60 }
+  fpds:        { enabled: false, poll_minutes: 60 }
+  defense_gov: { enabled: false, poll_minutes: 60 }
+  grants_gov:  { enabled: false, poll_minutes: 240 }
