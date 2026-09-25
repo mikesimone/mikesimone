@@ -1,0 +1,12 @@
+{
+  "results": [
+    {"Award ID": "W912DY26C0001", "Recipient Name": "ACME DEFENSE SYSTEMS INC", "Recipient UEI": "ABC123DEF456",
+     "Award Amount": 4500000.0, "Awarding Agency": "Department of Defense", "Start Date": "2026-09-22",
+     "generated_internal_id": "CONT_AWD_W912DY26C0001_9700_-NONE-_-NONE-"},
+    {"Award ID": "75N95026P0002", "Recipient Name": "SMALLCO LLC", "Recipient UEI": null,
+     "Award Amount": 1200000.0, "Awarding Agency": "Department of Health and Human Services", "Start Date": "2026-09-23",
+     "generated_internal_id": "CONT_AWD_75N95026P0002_7529_-NONE-_-NONE-"},
+    {"Award ID": "BROKEN", "Recipient Name": null, "Award Amount": 9000000.0, "generated_internal_id": "CONT_AWD_BROKEN"}
+  ],
+  "page_metadata": {"page": 1, "hasNext": true}
+}

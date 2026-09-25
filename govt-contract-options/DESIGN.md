@@ -1,6 +1,6 @@
 # Government Contract Options Bot — Design Document
 
-**Status:** Draft (design phase — no trading code yet)
+**Status:** Build in progress — see README.md for what exists
 **Author:** Design pass for the automated contract-award options watcher
 **Stack:** Python 3.11+, Schwab Trader API (live) + local shadow-ledger paper mode, official government data APIs
 
@@ -545,4 +545,4 @@ command driven by systemd timers.**
 
 ---
 
-*This is a design document only. No trading logic has been implemented yet.*
+*Implementation status is tracked in README.md.*
