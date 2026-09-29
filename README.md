@@ -85,7 +85,7 @@ A normal person has a home network. Mike has a fleet of machines named after fic
 
 ![SixOfOne, the only machine in Mike's house suitable for publication on GitHub](images/six_case.jpg)
 
-*The only computer in Mike's house suitable for publication on GitHub.*
+*The only computer in Mike's house suitable for publication on GitHub is, naturally, the one named after an NSFW character.*
 
 SixOfOne is named after a character from *Tripping the Rift*. The android science officer from a cartoon the Sci Fi Channel cancelled now runs ComfyUI, Ollama, and the household Signal hub. Some of the reserved names have since been commissioned. **Edgar** is a disposable helper container that holds SSH reach to the rest of the house. **Samaritan** is the Proxmox host Edgar is supposed to manage so nobody types on the hypervisor. **Skynet** is a second Windows laptop whose documented purpose is to run *none* of the AI stack.
 
