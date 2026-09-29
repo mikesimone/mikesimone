@@ -33,6 +33,16 @@ Mike has a tattoo that he describes as **himself in his natural habitat: a racco
 
 ![A raccoon holding a hand grenade tattoo](https://raw.githubusercontent.com/mikesimone/mikesimone/main/images/tattoo.jpg)
 
+The origin story does not help his case.
+
+At the Las Vegas Tattoo Festival, Mike saw an artist whose style he liked. So he fired up ChatGPT, had it create a raccoon-with-a-hand-grenade design, and a few minutes later committed to having it permanently installed on his body.
+
+The tattoo itself took about five hours.
+
+The decision took less time than some of his arguments about software settings.
+
+**Five hours of work. Lifetime commitment. Basically no change-control process whatsoever.**
+
 There is, admittedly, a lot to unpack there.
 
 The grenade is self-explanatory.
