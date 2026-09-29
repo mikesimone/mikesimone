@@ -73,7 +73,7 @@ Sometimes this produces genuinely impressive results.
 
 Sometimes it is merely an elaborate mechanism for turning an otherwise pleasant evening into unpaid systems engineering.
 
-## Production Environments Nobody Requested
+## Hobbies, Apparently
 
 Mike doesn't have hobbies.
 
