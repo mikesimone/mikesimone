@@ -245,11 +245,11 @@ This does create one important translation problem for the uninitiated: **contex
 
 For a demonstration, consider the day he asked Claude which fonts the Claude app uses. It wasn't typography. It was reconnaissance. Told the fonts were proprietary, he replied, verbatim: *“Shit. So I wouldn't be convincing.”* Then he asked Claude to doctor a screenshot so that its answer read *“Seriously, what the fuck is wrong with you?”* because it would make his friends laugh. Claude refused to forge the log, then typed the line for real so he could screenshot an honest copy.
 
-He got his insult anyway, with provenance.
+So Mike forged it himself.
 
-![Claude answers the question Mike was apparently asking by existing](images/claude-wtf.png)
+![The screenshot Claude declined to fake. Mike faked it anyway.](images/claude-wtf.png)
 
-**Only Mike would run a prank for his friends through chain of custody.**
+He'd worried he *wouldn't be convincing.* **He was.**
 
 ## Scope Management, Allegedly
 
