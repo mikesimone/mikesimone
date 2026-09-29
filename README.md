@@ -201,6 +201,10 @@ Unfortunately, he has receipts.
 
 After decades in cybersecurity, he has accumulated the sort of résumé that makes his impostor syndrome increasingly difficult to defend: major sales achievements, industry recognition, distinguished speaking, cybersecurity education, incident response, threat hunting, product incubation, technical workshops, certification development, and hundreds of millions of dollars in influenced sales pipeline.
 
+![Mike at work](images/MeAtWork.png)
+
+*Apparently some of this behavior is employable.*
+
 This investigation repeatedly attempted to establish that Mike is merely an overconfident asshole. Unfortunately, the documentary record would not cooperate.
 
 Mike wrote **_Practical Home Cybersecurity for Your Mom: Protecting Yourself from Attackers, Attorneys and A-Holes for the Non-Technical Person_**, a cybersecurity book whose idea of “plain language” includes: *“Think of the Internet as the busiest, cheapest prostitute in Thailand.”*
@@ -262,6 +266,10 @@ Every project begins innocently.
 Twenty minutes later there is a requirements document involving identity preservation, pose geometry, model selection, sampling methodology, denoise thresholds, facial consistency, accessory invariance, and a detailed investigation into why the subject has acquired unauthorized shoes.
 
 Mike can turn **making a picture** into something resembling an aerospace design review.
+
+![ComfyUI workflow for changing Lydia-Fursona's clothes while preserving identity](images/workflow.png)
+
+*“Let’s just change her clothes” eventually acquired a workflow diagram.*
 
 Nor does he merely revise prompts. **He ratifies case law.** The model lines the football teams up side by side instead of across the line of scrimmage? New rule. The quarterback runs toward his own end zone? New rule. The ball vanishes the moment the mobility walker appears? New rule. By the fourth attempt, *“make a funny football animation”* has acquired field geometry, direction-of-travel constraints, possession continuity, and uniform-number validation, each one a statute passed in response to a specific crime.
 
