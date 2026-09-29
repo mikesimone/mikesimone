@@ -143,6 +143,14 @@ This is not a hypothetical grievance. After one Anton reboot, verbatim: *“OH, 
 
 Being forgotten was bad enough. **Being introduced to Bing was an act of war.**
 
+The current Anton problem has escalated beyond cookies. Something in the BIOS is apparently still pissed off that Mike swapped GPUs, and every reboot has been wiping most of his cookies, his Signal database, his Windows Hello PIN, and his logins to Claude Code, Codex, and Grok Bot.
+
+This has now been investigated by Mike and three separate AI families working together.
+
+**The four of them still have not figured out how to unfuck it.**
+
+There may be no more dangerous condition in Mike's house than a computer problem that has survived long enough to become personal.
+
 Google Calendar did no better. Mike had Claude put every remaining Steelers game on his calendar. Then he added every Eagles game, because his lovely bride is an Eagles fan, and marriage means voluntarily accepting a second Pennsylvania source of Sunday anxiety. Then he set up a weekly job that checks Las Vegas broadcast listings and color-codes each game by whether he can watch it at home or has to go to the Durango. He asked for Amethyst and Avocado. Google's event API doesn't offer either color, so Claude gave him Grape and Basil. He made it clear he *genuinely* wanted Amethyst.
 
 He automated NFL broadcast-rights research and still lost to a color picker.
