@@ -83,7 +83,7 @@ A normal person has a home network. Mike has a fleet of machines named after fic
 
 **Anton** is the absurdly overpowered Windows daily driver and local generative-AI workstation. **WOPR** runs self-hosted services including the household photo infrastructure. **SixOfOne** handles more local AI and assorted experimental services. Other names are already reserved for future expansion, because apparently infrastructure planning now includes fictional-computer casting decisions.
 
-![SixOfOne, the only machine in Mike's house suitable for publication on GitHub](images/six_case.jpg)
+![SixOfOne, the only machine in Mike's house suitable for publication on GitHub](images/six_case_censored.jpg)
 
 *The only computer in Mike's house suitable for publication on GitHub is, naturally, the one named after an NSFW character.*
 
