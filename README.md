@@ -245,7 +245,7 @@ This does create one important translation problem for the uninitiated: **contex
 
 For a demonstration, consider the day he asked Claude which fonts the Claude app uses. It wasn't typography. It was reconnaissance. Told the fonts were proprietary, he replied, verbatim: *“Shit. So I wouldn't be convincing.”* Then he asked Claude to doctor a screenshot so that its answer read *“Seriously, what the fuck is wrong with you?”* because it would make his friends laugh. Claude refused to forge the log, then typed the line for real so he could screenshot an honest copy.
 
-So Mike forged it himself.
+So Mike fired up Photoshop and forged it himself.
 
 ![The screenshot Claude declined to fake. Mike faked it anyway.](images/claude-wtf.png)
 
