@@ -12,22 +12,6 @@
 - Professionally accomplished enough to make maintaining impostor syndrome annoyingly difficult, with **supporting documentation**; personally inclined to turn hobbies into production environments and other people's technical problems into his own.
 - **Overall rating: 4.7/5.** Technically impressive. Highly entertaining. Frequently exhausting. Excessive profanity. Emotionally squishier than advertised. **Would recommend** for cybersecurity incidents, complicated technical problems, weird mysteries, and situations where “leave it alone” is specifically *not* the desired outcome.
 
-## A Note to Potential Employers
-
-> **Editor's note:** This section was written before Mike started at his current cutting-edge employer, and with any luck it will never need to be used again. It stays up anyway, as a model for how every tech company should run interviews.
-
-If you're considering hiring Mike, **this page is your cultural-fit interview.** Read it. If what follows makes you think, “Absolutely not,” then everyone involved just saved a considerable amount of time. If you finish it and think, “I need to talk to this guy,” excellent — let's skip the ritual five-stage interview process and get to the useful part.
-
-Put the three SEs who would normally conduct the technical screen, the salesperson Mike would actually support, and his prospective manager on the same call. **You get two hours. Nothing is off limits.** Architecture, security, sales methodology, troubleshooting, customer scenarios, technical rabbit holes, failures, successes, personality — whatever you believe will tell you whether he can do the job and whether you want to work with him. Try to stump him. Challenge his assumptions. Give him an ugly problem and see what happens.
-
-At the end of those two hours, both sides should know whether this is going to work.
-
-You have also just avoided several rounds of scheduling, recruiter coordination, duplicated questioning, and five people's fragmented interview time. Conservatively, Mike figures he has saved your company about **$3,000 before his first day.**
-
-Consider it his first optimization.
-
----
-
 ## The Raccoon Problem
 
 Mike has a tattoo that he describes as **himself in his natural habitat: a raccoon holding a hand grenade.**
@@ -73,6 +57,22 @@ Telling him something “can't be done” does not function as useful informatio
 Sometimes this produces genuinely impressive results.
 
 Sometimes it is merely an elaborate mechanism for turning an otherwise pleasant evening into unpaid systems engineering.
+
+## A Note to Potential Employers
+
+> **Editor's note:** This section was written before Mike started at his current cutting-edge employer, and with any luck it will never need to be used again. It stays up anyway, as a model for how every tech company should run interviews.
+
+If you're considering hiring Mike, **this page is your cultural-fit interview.** Read it. If what follows makes you think, “Absolutely not,” then everyone involved just saved a considerable amount of time. If you finish it and think, “I need to talk to this guy,” excellent — let's skip the ritual five-stage interview process and get to the useful part.
+
+Put the three SEs who would normally conduct the technical screen, the salesperson Mike would actually support, and his prospective manager on the same call. **You get two hours. Nothing is off limits.** Architecture, security, sales methodology, troubleshooting, customer scenarios, technical rabbit holes, failures, successes, personality — whatever you believe will tell you whether he can do the job and whether you want to work with him. Try to stump him. Challenge his assumptions. Give him an ugly problem and see what happens.
+
+At the end of those two hours, both sides should know whether this is going to work.
+
+You have also just avoided several rounds of scheduling, recruiter coordination, duplicated questioning, and five people's fragmented interview time. Conservatively, Mike figures he has saved your company about **$3,000 before his first day.**
+
+Consider it his first optimization.
+
+---
 
 ## Hobbies, Apparently
 
