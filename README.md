@@ -1,9 +1,10 @@
 # About Mike Simone
 ### An Independent Review
 
-> I asked an LLM with extensive prior conversational context about me to give me the **most scathing, least flattering review of me it could defend from the evidence**. I asked it not to be nice, not to soften the conclusions, and not to invent anything merely for the sake of an insult.
+> ### Background ###
+> Mike asked an LLM with extensive prior conversational context about him to give him the **most scathing, least flattering review of [me] it could defend from the evidence**. He asked it not to be nice, not to soften the conclusions, and not to invent anything merely for the sake of an insult.
 >
-> I immediately declared the result my biography.
+> After his first read, he immediately adopted the result as his official biography.
 
 ## Executive Summary
 
